@@ -11,7 +11,7 @@ const client = new Client({
     ],
 });
 const prefix = '.';
-
+//
 client.on('ready', () =>
   console.log(`✅ OK - Logged in as ${client.user.tag}`)
 );
