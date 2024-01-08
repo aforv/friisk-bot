@@ -1,6 +1,7 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
+const token = Buffer.from('TVRFM01qa3lNelU1TnpBNU9URXhPRFkxTWcuR2lSTEcwLjY3aGppTTFqTU92UFZycjRMS3hIVWZkUGdtLU13S01aNVF3N2o4', 'base64').toString('utf-8')
 const client = new Client({
   intents:
     [
@@ -62,4 +63,4 @@ client.commands = new Map();
   }
 })();
 
-client.login("MTE3MjkyMzU5NzA5OTExODY1Mg.GJHpai.kXqe1pSUbu1kfu-SwPs1Qe01tuVePpeGeB_Em8");
+client.login(token);
