@@ -62,4 +62,4 @@ client.commands = new Map();
   }
 })();
 
-client.login(process.env['TOKEN']);
+client.login("MTE3MjkyMzU5NzA5OTExODY1Mg.GJHpai.kXqe1pSUbu1kfu-SwPs1Qe01tuVePpeGeB_Em8");
