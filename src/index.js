@@ -1,6 +1,8 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
+const express = require('express');
+const app = express();
 const token = process.env["TOKEN"];
 const client = new Client({
   intents:
@@ -16,6 +18,14 @@ const prefix = '.';
 client.on('ready', () =>
   console.log(`✅ OK - Logged in as ${client.user.tag}`)
 );
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/webpage/index.html');
+});
+
+app.listen(3000, () => {
+  console.log('✅ OK - Server started');
+});
 
 client.on('messageCreate', (message) => {
   // Check if message is sent by a bot or if it starts with the prefix

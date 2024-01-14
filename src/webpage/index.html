@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>
+      friisk Homepage
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>
+            friisk
+          </h1>
+          <p>
+            friisk is a discord bot designed to be an all-purpose bot that provides up to 30 commands for moderation, information, fun and utility to keep your server fresh.
+          </p>
+          <p>
+            <small>
+            friisk is currently in development and is not yet available for public use. for you to test the functionality of the bot, you can join <a href="#placeholder">friisk's support server</a> and report any problems to the bot's developer.
+            </small>
+          </p>
+        </div>
+        <div class="col-md-12">
+          <h2>
+            Commands
+          </h2>
+          <div class="commands"></div>
+        </div>
+      </div>
+
+      <script>
+        const commands = [
+          {
+            name: "help",
+            description: "Shows a message containing all the commands and their descriptions.",
+            usage: "help",
+          },
+          {
+            name: "stats",
+            description: "Shows information about the bot, server or user.",
+            usage: "stats [user/server/bot]",
+          },
+          {
+            name: "uptime",
+            description: "Shows how long the bot has been online.",
+            usage: "uptime",
+          },
+            {
+              name: "ping",
+              description: "Shows the bot's latency.",
+              usage: "ping",
+            },
+          {
+            name: "ban",
+            description: "Bans a member with a specified reason.",
+            usage: "ban [member] [reason]",
+          },
+          {
+            name: "kick",
+            description: "Kicks a member with a specified reason.",
+            usage: "kick [member] [reason]",
+          },
+          {
+            name: "purge",
+            description: "Deletes a specified number of messages.",
+            usage: "purge [number]",
+          },
+          {
+            name: "mute",
+            description: "Mutes a member.",
+            usage: "mute [member]",
+          },
+          {
+            name: "unmute",
+            description: "Unmutes a member.",
+            usage: "unmute [member]",
+          },
+          {
+            name: "lock",
+            description: "Locks the channel.",
+            usage: "lock",
+          },
+          {
+            name: "unlock",
+            description: "Unlocks the channel.",
+            usage: "unlock",
+          },
+          {
+            name: "slowmode",
+            description: "Sets the slowmode for the channel.",
+            usage: "slowmode [time(sec)]",
+          },
+        ]
+
+        const commandsDiv = document.querySelector(".commands");
+        commands.forEach(command => {
+          const commandDiv = document.createElement("div")
+          commandDiv.classList.add("command")
+          commandDiv.classList.add("border")
+          commandDiv.innerHTML = `
+            <b>.${command.name}</b>
+            <p>${command.description}</p>
+            <p>Usage: <code> ${command.usage}</code></p><hr>
+          `
+          commandsDiv.appendChild(commandDiv)
+        });
+      </script>
+  </body>
+</html>
