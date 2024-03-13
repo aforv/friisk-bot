@@ -19,9 +19,7 @@ client.on('ready', () =>
   console.log(`✅ OK - Logged in as ${client.user.tag}`)
 );
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/webpage/index.html');
-});
+app.use(express.static(path.join(__dirname, 'webpage')));
 
 app.listen(3000, () => {
   console.log('✅ OK - Server started');
