@@ -27,7 +27,7 @@ module.exports.run = async(client, message, args) => {
   const question = args.join(' ');
   const response = responses[Math.floor(Math.random() * responses.length)];
   const embed = new EmbedBuilder()
-    .setTitle(message.author.username + ' 8ball')
+    .setTitle(message.author.username + '’s 8ball')
     .setDescription(`**Question:** ${question}\n**Answer:** ${response}`)
     .setColor('#333333');
   message.reply({ embeds: [embed] });

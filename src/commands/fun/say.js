@@ -1,8 +1,8 @@
 const { EmbedBuilder } = require('discord.js');
 
 module.exports.run = async (client, message, args) => {
-  const channel = message.mentions.channels.first() || message.channel
-  const hide = args[1]?.toLowerCase() === 'y' ? true : false;
+  let channel = message.mentions.channels.first() || message.channel
+  let hide = args[1]?.toLowerCase() === 'y' ? true : false;
   args[1] += "≥"
   const text = args.slice('≥').join(" ").trim();
 

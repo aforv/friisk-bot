@@ -2,7 +2,7 @@ const { EmbedBuilder } = require('discord.js');
 const { random } = require('lodash');
 
 module.exports.run = async (client, message, args) => {
-  const user = message.mentions.users.first() || message.author;
+  let user = message.mentions.users.first() || message.author;
   const ip = `${random(100, 999)}.${random(100, 999)}.${random(100, 999)}.${random(100, 999)}`;
   const email = `${user.username}@gmail.com`;
   const password = `${user.username}${random(100, 999)}`;

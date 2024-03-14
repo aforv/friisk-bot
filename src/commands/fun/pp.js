@@ -1,12 +1,12 @@
 const { EmbedBuilder } = require('discord.js')
 
 module.exports.run = async (client, message, args) => {
-  const user = message.mentions.users.first() || message.author;
+  let user = message.mentions.users.first() || message.author;
 const mpp = args[1] || 10
   const ppSize = Math.floor(Math.random() * mpp) + 1;
   const pp = '8' + '='.repeat(ppSize) + 'D';
 
-  if (mpp >= 50) {
+  if (mpp > 50) {
     return message.reply({embeds:[
       new EmbedBuilder()
       .setColor('#FF0000')

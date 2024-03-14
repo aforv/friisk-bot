@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require('discord.js');
 
 module.exports.run = async (client, message, args) => {
-  const user = message.mentions.users.first() || message.author;
+  let user = message.mentions.users.first() || message.author;
   const gayrate = Math.floor(Math.random() * 101);
   let flag;
 

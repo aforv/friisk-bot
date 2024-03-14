@@ -1,7 +1,7 @@
 const {EmbedBuilder} = require('discord.js')
 
 module.exports.run = async (client, message, args) => {
-  const user = message.mentions.users.first() || message.author;
+  let user = message.mentions.users.first() || message.author;
   const avatarURL = user.displayAvatarURL({ dynamic: true, size: 4096 });
 
   if (args[1] == '-') {
