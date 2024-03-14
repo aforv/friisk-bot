@@ -4,7 +4,8 @@ module.exports.run = async (client, message, args) => {
   let channel = message.mentions.channels.first() || message.channel
   let hide = args[1]?.toLowerCase() === 'y' ? true : false;
   args[1] += "⌀"
-  const text = args.join(" ").slice(args.indexOf('⌀') + 1);
+  let text = args.join(" ");
+text = text.slice(args.indexOf('⌀') + 1);
 
   if (args[0] == '-') {
     channel = message.channel
