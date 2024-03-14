@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
   let hide = args[1]?.toLowerCase() === 'y' ? true : false;
   args[1] += "⌀"
   let text = args.join(" ");
-text = text.slice(args.indexOf('⌀') + 1);
+text = text.slice(text.indexOf('⌀') + 1);
 
   if (args[0] == '-') {
     channel = message.channel
