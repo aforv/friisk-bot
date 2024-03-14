@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle('Hacking Results')
     .setDescription(`**Name:** ${user.username}\n**IP:** ${ip}\n**Email:** ${email}\n**Password:** ${password}`)
     .setColor('#FF0000')
-    .setFooter('As this might trigger someone in this generation, **This is a joke!** It is not meant to hurt anyone in any way.');
+    .setFooter({text: 'As this might trigger someone in this generation, **This is a joke!** It is not meant to hurt anyone in any way.'});
 
   message.reply({ embeds: [embed] });
 }

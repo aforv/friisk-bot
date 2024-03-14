@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
     .setColor('#FF0000')
     .setTitle('Simprate Machine')
     .setDescription(`${user.username} is ${simprate}% simp!`)
-    .setFooter('As this might trigger someone in this generation, **This is a joke!** It is not meant to hurt anyone in any way.');
+    .setFooter({text: 'As this might trigger someone in this generation, **This is a joke!** It is not meant to hurt anyone in any way.'});
 
   message.reply({ embeds: [embed] });
 }

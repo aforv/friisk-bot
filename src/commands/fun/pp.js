@@ -22,7 +22,7 @@ user = message.author
     .setColor('#333333')
     .setTitle(`${user.username}'s PP Size`)
     .setDescription(pp)
-    .setFooter('As this might trigger someone in this generation, **This is a joke!** It is not meant to hurt anyone in any way.');
+    .setFooter({text: 'As this might trigger someone in this generation, **This is a joke!** It is not meant to hurt anyone in any way.'});
 
   message.reply({ embeds: [embed] });
 }
