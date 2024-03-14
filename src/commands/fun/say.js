@@ -6,11 +6,11 @@ module.exports.run = async (client, message, args) => {
   args[1] += "≥"
   const text = args.slice(args.indexOf('≥')).join(" ").replace('≥', '').trim();
 
-  if (args[0] = '-') {
+  if (args[0] == '-') {
     channel = message.channel
   }
   
-  if (args[1] = '-≥') {
+  if (args[1] == '-≥') {
     hide = false
   }
 
@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
     return message.reply('Please provide some text to say.');
   }
 
-  if (hide) {
+  if (hide == true) {
     message.delete();
   }
 
