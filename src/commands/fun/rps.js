@@ -37,4 +37,6 @@ module.exports.run = async (client, message, args) => {
     .setTitle('Rock, Paper, Scissors')
     .setDescription(`You chose ${userEChoice}, I chose ${ec[botChoicer]}. ${result}`)
 .setColor('#333333');
+
+  message.reply({ embeds: [embed] });
 }
