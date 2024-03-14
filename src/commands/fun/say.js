@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
   let channel = message.mentions.channels.first() || message.channel
   let hide = args[1]?.toLowerCase() === 'y' ? true : false;
   args[1] += "≥"
-  const text = args.slice('≥').join(" ").trim();
+  const text = args.slice(args.indexOf('≥')).join(" ").replace('≥', '').trim();
 
   if (args[0] = '-') {
     channel = message.channel
